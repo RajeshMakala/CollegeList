@@ -1,31 +1,99 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - API usage examples</title>
-    <link rel="stylesheet" href="~/css/site.css" />
-    @*<script type="text/javascript" src="~/js/Chart.min.js"></script>*@
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script type="text/javascript" src="~/lib/chartjs-plugin-annotation-master/chartjs-plugin-annotation.min.js"></script>
-    <script type="text/javascript" src="~/js/site.js"></script>
-</head> 
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Dis assignment3</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="~/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/css/da-slider.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <!-- Font Awesome -->
+    <link href="~/font/css/font-awesome.min.css" rel="stylesheet">
+</head>
 <body>
-    <nav>
-        <div class="nav-bar">
-            <a asp-area="" asp-controller="Home" asp-action="Index">Home </a><text> | </text>
-            <a asp-area="" asp-controller="Home" asp-action="Symbols">Symbols </a><text> | </text>
-            <a asp-area="" asp-controller="Home" asp-action="Chart">Chart </a><text> | </text>
-            <a asp-area="" asp-controller="Home" asp-action="Refresh">Refresh </a><text> | </text>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top logo"><b>College</b>List</a>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="mainNav">
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Index", "Home") + "' ");">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Explore", "Home") + "' ");">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Model", "Home") + "' ");">About Us</a></li>
+
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
         </div>
-    </nav>
+        <!--/.container-->
+    </header>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+
+        </main>
+    </div>
+
+
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+    <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+    <script src="js/modernizr-latest.js"></script>
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="js/jquery.nav.js" type="text/javascript"></script>
+    <script src="js/jquery.cslider.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>ISDS, Muma College of Business, University of South Florida</p>
-        </footer>
+
     </div>
+
+
     @RenderSection("Scripts", required: false)
 </body>
+<footer class="page-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 contact">
+                <h4>Contact Info</h4>
+                <p></p>
+                <ul>
+                    <li><i class="fa fa-phone"></i>1-123-345-6789</li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> myweb@usf.edu</a></li>
+                    <li><i class="fa fa-flag"></i>Tampa,Florida,33613</li>
+                </ul>
+            </div>
+        </div><!-- END Row -->
+    </div>
+</footer>
 </html>

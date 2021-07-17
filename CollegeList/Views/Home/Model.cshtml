@@ -1,0 +1,250 @@
+﻿
+@{
+    ViewData["Title"] = "Model";
+}
+
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Data Model</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="~/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/css/da-slider.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <!-- Font Awesome -->
+    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top logo"><b>College</b>List</a>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" id="mainNav">
+
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Index", "Home") + "' ");">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Explore", "Home") + "' ");">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Model", "Home") + "' ");">About Us</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </header>
+    <!--/.header-->
+    <div id="#top"></div>
+
+    <section class="sub-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div><!-- END container -->
+    </section>
+
+    <section id="team" class="page-section">
+        <div class="container">
+            <div class="heading text-center">
+                <!-- Heading -->
+                <br>
+                <br>
+                <h2>Our Team</h2>
+                <p> We are Group 4 of ISM 6225 Course at USF. Our main goal of designing this website is to allow users to search the Universities in a state and explore the available Departments and Highest Degrees offered by those Departments in the university.Our project code is available <a class="pos" href=" https://github.com/deekolli/Assignment_LookAndFeel">Here.</a></p>
+                <p> All the api documents and usage guides are available <a class="nav-link grey-text text-lighten-3" href=" https://collegescorecard.ed.gov/data/documentation/">Here</a></p>
+            </div>
+            <!-- Team Member's Details -->
+            <div class="team-content">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <!-- Team Member -->
+                        <div class="team-member pDark">
+                            <!-- Image Hover Block -->
+                            <div class="member-img">
+                                <!-- Image  -->
+                                <img class="img-responsive" src="~/Images/photo-1.jpg" alt="">
+                            </div>
+                            <!-- Member Details -->
+                            <h3>Deepika Kolli</h3>
+                            <!-- Designation -->
+                            <span class="pos">
+                                <a class="pos" href=" https://github.com/deekolli/Assignment_LookAndFeel">Git</a>
+                            </span>
+
+                            <div class="descrition">
+                                <p>Currently a Graduate student in Business Analytics and Information Systems at USF,Deepika has about 3 years of experience as a Software Developer. She contributed in designing the layout and developed the Explore page and About Us page of the website.</p><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <!-- Team Member -->
+                        <div class="team-member pDark">
+                            <!-- Image Hover Block -->
+                            <div class="member-img">
+                                <!-- Image  -->
+                                <img class="img-responsive" src="~/Images/3.jpeg" alt="">
+                            </div>
+                            <!-- Member Details -->
+                            <h3>Rajesh Makala</h3>
+                            <!-- Designation -->
+                            <span class="pos">
+                                <a class="pos" href=" https://github.com/RajeshMakala">Git</a>
+                            </span>
+                            <div class="descrition">
+                                <p>
+                                    Currently a graduate student in Business Analytics and Information Systems at USF, Rajesh has 4 years of experience as a Data Engineer. He contributed in designing the data model and visualization for the data and helped in designing the various web pages.
+
+                                    <br>
+                                </p><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <!-- Team Member -->
+                        <div class="team-member pDark">
+                            <!-- Image Hover Block -->
+                            <div class="member-img">
+                                <!-- Image  -->
+                                <img class="img-responsive" src="~/Images/2.jpeg" alt="">
+                            </div>
+                            <!-- Member Details -->
+                            <h3>Sai Vandana Bodapati</h3>
+                            <!-- Designation -->
+                            <span class="pos">
+                                <a class="pos" href=" https://github.com/bodapati201">Git</a>
+                            </span>
+                            <div class="descrition">
+                                <p>
+                                    A Graduate student in Business Analytics and Information Systems at USF, Vandana has contributed to styling the webpages and choosing the content and images to be displayed for the website.
+                                </p>
+                                <br>
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <!-- Team Member -->
+                        <div class="team-member pDark">
+                            <!-- Image Hover Block -->
+                            <div class="member-img">
+                                <!-- Image  -->
+                                <img class="img-responsive" src="~/Images/4.jpeg" alt="">
+                            </div>
+                            <!-- Member Details -->
+                            <h3>Sangeetha Sreekumar</h3>
+                            <!-- Designation -->
+                            <span class="pos">
+                                <a class="pos" href=" https://github.com/mssreekumar">Git</a>
+                            </span>
+                            <div class="descrition">
+                                <p>
+                                    Currently a Graduate student in Business Analytics and Information Systems at USF, Sangeetha Sreekumar has contributed and helped in developing and designing the pages in the website.
+                                    <br><br>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--/.container-->
+    </section>
+
+
+
+    <section id="model" class="page-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="heading text-center">
+                    <!-- Heading -->
+                    <h2>Data Model</h2>
+                    <p>The below diagram shows the data model for our data.It has two one to many relationships.</p>
+                </div>
+                <div class="col-sm-12">
+                    <div id="mapWrapper" class="mb30" style="position: relative; maring-bottom:20px; background-color: #FEFCFF; overflow: hidden; -webkit-transform: translateZ(0px);">
+                        <center><img class="img-responsive" src="~/Images/model.png" alt=""></center>
+                    </div><br />
+                </div>
+            </div>
+
+
+        </div>
+        <!--/.container-->
+    </section>
+
+
+
+
+
+    <!--/#north-america-->
+
+    <footer class="page-section">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 contact">
+
+                    <h4>Contact Info</h4>
+                    <p></p>
+                    <ul>
+                        <li><i class="fa fa-phone"></i>1-123-345-6789</li>
+                        <li><a href="#"><i class="fa fa-envelope-o"></i> myweb@usf.edu</a></li>
+                        <li><i class="fa fa-flag"></i>Tampa,Florida,33613</li>
+                    </ul>
+
+                </div>
+            </div><!-- END Row -->
+        </div>
+
+    </footer>
+    <!--/.page-section-->
+
+    <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+    <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+    <script src="~/js/modernizr-latest.js"></script>
+    <script src="~/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="~/js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="~/js/jquery.nav.js" type="text/javascript"></script>
+    <script src="~/js/jquery.cslider.js" type="text/javascript"></script>
+    <script src="~/js/custom.js" type="text/javascript"></script>
+</body>
+</html>
+
+

@@ -9,5 +9,9 @@ namespace CollegeList.DataAccess
     public interface IRepository
     {
        Task<bool> SaveCollegesListToDb(Rootobject rootObject);
+
+        IEnumerable<Institution> GetAllInstitutions();
+
+        Institution GetInstitutionById(Guid institutionId);
     }
 }

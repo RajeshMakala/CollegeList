@@ -27,7 +27,26 @@ namespace CollegeList.Controllers
 
         public IActionResult Index()
         {
-            return GetCollegesInfo();
+            GetCollegesInfo();
+            return View();
+        }
+
+        public IActionResult Model()
+        {
+            return View();
+        }
+
+
+        public IActionResult Explore()
+        {
+            return View(_repository.GetAllInstitutions());
+        }
+
+        public IActionResult Details(Guid id)
+        {
+            var val =  _repository.GetInstitutionById(id);
+            
+            return View(val);
         }
 
 
@@ -35,7 +54,7 @@ namespace CollegeList.Controllers
         {
             var detailsOfColleges = GetAllCollegesList();
             _repository.SaveCollegesListToDb(detailsOfColleges);
-            return View();
+            return Ok();
         }
 
 

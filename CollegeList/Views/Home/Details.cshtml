@@ -1,9 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model CollegeList.Models.Institution
 
+@{ ViewData["Title"] = "Details"; }
 
-<!--Your HTML code here-->
 <!doctype html>
 <!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
@@ -17,7 +15,7 @@
     <!--[if lt IE 9]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
-    <title>Dis assignment4</title>
+    <title>Explore Universities</title>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,15 +40,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand scroll-top l
-                       ogo"><b>College</b>List</a>
+                    <a href="#" class="navbar-brand scroll-top logo"><b>College</b>List</a>
                 </div>
                 <!--/.navbar-header-->
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav" id="mainNav">
-                        <li class="active"><a href="#home" class="scroll-link">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" onclick="@("location.href='" + @Url.Action("Explore", "Home") + "'");">Explore</a></li>
-                        <li class="nav-item"><a class="nav-link" onclick="@("location.href='" + @Url.Action("Model", "Home") + "'");">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Index", "Home") + "' ");">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Explore", "Home") + "' ");">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="@(" location.href='" + @Url.Action("Model", "Home") + "' ");">About Us</a></li>
+
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
@@ -60,60 +58,47 @@
         <!--/.container-->
     </header>
     <!--/.header-->
+
+
+
     <div id="#top"></div>
-    <section id="home" class="page-section">
-        <div class="banner-container">
-            <div class="bannerOverlay"></div>
-            <div class="container banner-content">
-                <
-                <!--h1>Responsive Page Scrolling<br/><span>with Bootstrap</span></h1>
-                <p class="lead">Use the navigation above to scroll to different page sections.</p>
-                <p><a href="#about" class="button-outline"> More.. </a></p>-->
-                <div id="da-slider" class="da-slider">
-                    <div class="da-slide">
-                        <h2 Style="font-family: 'Broadway'; color:rgb(94.12%,42.35%,0%)">Welcome</h2>
-                        <p Style="font-family: 'Courier';color:black">Search the Universities in a state</p>
+    <section>
+        <header class="align-center">
+            <br><br> <br>
+            <center><h2 Style="color:rgb(94.12%,42.35%,0%)">@Html.DisplayFor(model => model.SchoolName)</h2></center>
+            <br>
+            <center><strong><h4>Departments and degrees offered by the Institution </h4></strong></center>
+        </header>
+        <h4></h4>
+        <div class="table-wrapper">
+            <table class="alt">
+                <center>
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th><center>Code</center></th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                        <div class="da-img"></div>
-                    </div>
-                    <div class="da-slide">
-                        <h2 Style="font-family: 'Broadway'; color:rgb(94.12%,42.35%,0%)">Departments</h2>
-                        <p Style="font-family: 'Courier';color:black" ;>Explore the Departments in the University</p>
+                    @foreach (var item in Model.FieldOfStudies)
+                    {
+                        <tr>
+                            <td> @Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Degree)</td>
+                        </tr>
+                    }
 
-                        <div class="da-img"></div>
-                    </div>
-                    <div class="da-slide">
-                        <h2 Style="font-family: 'Broadway'; color:rgb(94.12%,42.35%,0%)"> Degrees </h2>
-                        <p Style="font-family: 'Courier';color:black" ;>Explore the highest degree offered by the department.</p>
 
-                        <div class="da-img"></div>
-                    </div>
-
-                    <nav class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </nav>
-                </div>
+                </tbody>
+                </center>
+            </table>
+            <div class="card-action">
+                <a asp-action="Edit" asp-route-id="@Model.Id">Update</a> |
+                <a asp-action="Create">Add</a> |
+                <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
             </div>
         </div>
-    </section>
-    <section class="sub-heading">
-        <div class="row">
-            <div class="heading text-center">
-                <!-- Heading -->
-                <h2></h2>
-                <p>The below bar graph shows the number of universities per state</p>
-            </div>
-            <div class="col-sm-12">
-                <div id="mapWrapper" class="mb30" style="position: relative; maring-bottom:20px; background-color: #FEFCFF; overflow: hidden; -webkit-transform: translateZ(0px);">
-
-                    <center><img class="img-responsive" src="~/Images/viz.png" alt=""> </center>
-                    <br />
-                </div>
-            </div>
-        </div>
-
-        <!--/.container-->
     </section>
 
 

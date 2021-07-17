@@ -1,4 +1,5 @@
 ﻿using CollegeList.Models;
+using Microsoft.EntityFrameworkCore;
 using MVC_EF_Start.DataAccess;
 using System;
 using System.Collections.Generic;
@@ -49,5 +50,18 @@ namespace CollegeList.DataAccess
 
 			return anyNewRcordsInserted;
 		}
-    }
+
+		public IEnumerable<Institution> GetAllInstitutions()
+        {
+			return  _appDbContext.Institution.ToList();
+        }
+
+		public Institution GetInstitutionById(Guid institutionId)
+        {
+			var university = _appDbContext.Institution.Include(x => x.FieldOfStudies)
+													  .SingleOrDefault(x => x.Id == institutionId);
+			return university;
+
+		}
+	}
 }
