@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeList.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210717042540_CreateCollegeListDb")]
+    [Migration("20210717213248_CreateCollegeListDb")]
     partial class CreateCollegeListDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -44,6 +45,25 @@ namespace CollegeList.Models
     public class Credential
     {
         public string title { get; set; }
+    }
+
+    public class UpdatePark
+    {
+        [Key]
+        public Guid ID { get; set; }
+      
+
+
+
+        public string fullName { get; set; }
+      
+        public string parkCode { get; set; }
+      
+
+
+        public ICollection<string> statenames { get; set; }
+       
+        public ICollection<string> activitynames { get; set; }
     }
 
 }

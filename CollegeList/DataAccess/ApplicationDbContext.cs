@@ -10,5 +10,6 @@ namespace MVC_EF_Start.DataAccess
 
     public DbSet<Institution> Institution { get; set; }
     public DbSet<FieldOfStudy> FieldOfStudy { get; set; }
+    
   }
 }

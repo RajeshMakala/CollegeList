@@ -1,0 +1,122 @@
+﻿@model CollegeList.Models.UpdatePark
+@{ ViewData["Title"] = "Edit"; }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Dis assignment4</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="~/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="~/css/da-slider.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <!-- Font Awesome -->
+    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<header class="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand scroll-top l
+                       ogo"><b>College</b>List</a>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="mainNav">
+                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="@("location.href='" + @Url.Action("Explore", "Home") + "'");">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="@("location.href='" + @Url.Action("Model", "Home") + "'");">About Us</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</header>
+
+
+    <section class="sub-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+        </div><!-- END container -->
+    </section>
+    <section id="model" class="page-section">
+        <div class="container">
+
+            <div class="row">
+                <div class="heading text-center">
+                    <!-- Heading -->
+                    <br><br><br>
+                    <h4 class="card-title text-center">Please Update The College Details Below</h4>
+
+                    <form method="post" asp-controller="Home" asp-action="Edit">
+                        <div class="form-group">
+                            <label asp-for="fullName">Name of the College</label>
+                            <div>
+                                <textarea class="form-control" asp-for="fullName" rows="1"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="parkCode">City</label>
+                            <div>
+                                <textarea class="form-control" asp-for="parkCode" rows="1"></textarea>
+                                <span asp-validation-for="parkCode"></span>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="col text-center">
+                            <button class="btn btn-danger btn-lg" type="submit" name="action"> Click to Submit Updates </button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-sm-12">
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--/.container-->
+    </section>
+  
+
+<footer class="page-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 contact">
+                <h4>Contact Info</h4>
+                <p></p>
+                <ul>
+                    <li><i class="fa fa-phone"></i>1-123-345-6789</li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> myweb@usf.edu</a></li>
+                    <li><i class="fa fa-flag"></i>Tampa,Florida,33613</li>
+                </ul>
+            </div>
+        </div><!-- END Row -->
+    </div>
+</footer>

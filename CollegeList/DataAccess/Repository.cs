@@ -15,6 +15,7 @@ namespace CollegeList.DataAccess
 		public Repository(ApplicationDbContext appDbContext)
 		{
 			_appDbContext = appDbContext;
+			_appDbContext.Database.EnsureCreated();
 		}
 		public async Task<bool> SaveCollegesListToDb(Rootobject rootObject)
         {
@@ -63,5 +64,6 @@ namespace CollegeList.DataAccess
 			return university;
 
 		}
+
 	}
 }

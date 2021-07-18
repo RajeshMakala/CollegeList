@@ -14,6 +14,7 @@ namespace CollegeList.Controllers
         public DatabaseController(ApplicationDbContext context)
         {
             dbContext = context;
+       
         }
         public IActionResult Index()
         {

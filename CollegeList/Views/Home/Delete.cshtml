@@ -1,0 +1,65 @@
+﻿@model CollegeList.Models.Institution
+
+<section class="sub-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2></h2>
+                <p></p>
+            </div>
+        </div>
+    </div><!-- END container -->
+</section>
+<section id="model" class="page-section">
+    <div class="container">
+
+        <div class="row">
+            <div class="heading text-center">
+                <!-- Heading -->
+                <br><br><br>
+
+            </div>
+            <div class="col-sm-12">
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--/.container-->
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="text-danger">@ViewData["ErrorMessage"]</p>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="col-sm-3"><b>College Name</b></div>
+                        <div class="col-sm-9">@Html.DisplayFor(model => model.SchoolName)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3"><b>State</b></div>
+                        <div class="col-sm-9">
+                          
+                            
+                                @Html.DisplayFor(model => model.SchoolState)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" asp-controller="Home" asp-action="Delete">
+            <input type="hidden" asp-for="SchoolName" />
+            <div class="col text-center">
+                <button class="btn btn-danger" type="submit" name="action"><b>Click me to delete the College</b></button>
+
+            </div>
+        </form>
+
+    </div>
+</div>
